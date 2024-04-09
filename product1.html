@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 1</title>
+    <link href="product1.css" rel="stylesheet">
+</head>
+<body>
+    <h1 >Vegetables Product</h1>
+
+<nav>
+<ul>
+<li><a href="#tomatoes">Tomatoes</a></li>
+<li><a href="#carrots">Carrots</a></li>
+<li><a href="#spinach">Spinach</a></li>
+</ul>
+</nav>
+<section id="tomatoes">
+<h2>Tomatoes</h2>
+<img src ="tomato.jpg" alt="Tomato">
+<ul>
+<h2>Health Benifit</h2>
+   <li>Tomatoes are rich in vitamins and minerals. They are a key ingredient in many cuisines around the world.</li>
+    <h3>Nutritional Benifits</h3>
+    <li> Spinach is packed with nutrients, including vitamins A, C, and K, as well as folate, iron, and calcium. It's low in calories but high in fiber, making it a nutrient-dense addition to your diet.
+    </li>
+    
+</ul>
+
+<h2>Organic Tomatoes</h2>
+<button class="btn" onclick="addedTomato()">Add to Cart</button>
+
+</section>
+<section id="carrots">
+<h2>Carrots</h2>
+<img src ="carrot.jpg" alt="Carrot">
+<ul>
+    <h2>Healthy Benefiet</h2>
+    <li>Regular consumption of carrots can contribute to lower cholesterol levels, improved eye health, and reduced risk of certain cancers. The fiber in carrots supports digestive health and helps regulate blood sugar levels.</li>
+     <h3>Nutritional Benefits</h3>
+      <li>Carrots are rich in beta-carotene, a precursor to vitamin A, which is essential for vision health, immune function, and skin health. They also contain fiber, vitamin K1, potassium, and antioxidants like vitamin C.</li>
+ </ul>     
+</section>
+<h1>Organic Carrot</h1>
+<button class="btn" onclick="addedCarrot()">Add to Cart</button>
+
+</header>
+<footer>
+</section>
+<section id="spinach">
+<h2>Spinach</h2>
+<img src ="spinach.jpg" alt="Spinach">
+<ul>
+     <h2>Nutritional Benefits</h2>
+      <li> Spinach is packed with nutrients, including vitamins A, C, and K, as well as folate, iron, and calcium. It's low in calories but high in fiber, making it a nutrient-dense addition to your diet.</li>
+     <p>Spinach is a leafy green vegetable packed with nutrients like iron, calcium, and vitamins A and C. It can be eaten raw in salads or cooked in various dishes.</p>
+        <h3>Health Benifit</h3>
+      <li> Regular consumption of spinach is associated with various health benefits, such as improved eye health, strengthened bones, and reduced risk of chronic diseases like heart disease and certain cancers. The antioxidants in spinach help fight inflammation and oxidative stress in the body.</li>
+</ul>
+</section>
+<div>
+    <h2>Organic Spinach</h2>
+    <Price: $2.99 per pound/>
+            <button class="btn" onclick="addedSpinach()">Add to Cart</button>
+        </div>
+        <div class="cart" id="cart"></div>
+    </div>
+    <script>
+        let cartItems = [];
+
+        function addedSpinach() {
+          
+            cartItems.push("Organic Spinach - 200rs ");
+            updateCart();
+        }
+        function addedTomato() {
+          
+          cartItems.push("Organic Tomato - 100rs ");
+          updateCart();
+      }
+      function addedCarrot() {
+          
+          cartItems.push("Organic Carrot - 150rs ");
+          updateCart();
+      }
+        function updateCart() {
+            let cartElement = document.getElementById("cart");
+            cartElement.innerHTML = "<h2>Shopping Cart</h2>";
+            if (cartItems.length === 0) {
+                cartElement.innerHTML += "<p>Your cart is empty.</p>";
+            } else {
+                for (let item of cartItems) {
+                    cartElement.innerHTML += "<p>" + item + "</p>";
+                }
+            }
+        }
+        
+</script>
+</body>
+</html>
+</body>
+</html>
